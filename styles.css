@@ -380,21 +380,27 @@ li:last-of-type {
 }
 
 ul {
-  list-style-position: inside;
-  padding-left: 0; 
+    list-style: none; 
+    padding-left: 0;
 }
 
 li {
     padding: 14px 0;
-    list-style-position: inside;
+    position: relative;
+    padding-left: 2.2em;
     color: var(--hero-paragraph);
     font-size: 1.6rem;
 }
 
-li::marker {
-    content: "✔  ";
+li::before {
+    padding: 14px 0;
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
     color: #16a34a;
     font-size: 2rem;
+    line-height: 1.6rem;
 }
 
 #pricing-container-main { 
@@ -618,4 +624,4 @@ footer {
         margin: 60px auto 0 auto;
         padding: 24px;
 }
-}   
+}
